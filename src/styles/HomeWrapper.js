@@ -7,16 +7,67 @@ const HomeWrapper = styledComponents.div`
   display: flex;
   justify-content: space-between;
   padding: 1rem 0rem;
-  min-height: 700px;
+  min-height: 750px;
+  width: 75%;
   margin-left: -100px;
 
 
-  @media (max-width: 1200px){
+  @media only screen and (max-width: 1200px){
     .header-text {
-      padding: 10em 2em !important;
+      padding: 10em !important;
+      min-width: 400px;
+
+
+      .main-text{
+        margin-left: -100px;
+
+        h1 {
+          font-size: 60px !important;
+        }
+
+        h2 {
+          font-size: 20px !important;
+        }
+      }
+    }
+
+    .intro-text {
+      margin-left: -97px !important;
+      max-width: 600px !important;
+
+      p {
+        font-size: 13px !important;
+      }
     }
   }
 
+  @media only screen and (max-width: 800px){
+    .header-text {
+      padding: 10em !important;
+      min-width: 250px;
+
+      .main-text{
+        margin-left: -120px;
+
+        h1 {
+          font-size: 40px !important;
+        }
+
+        h2 {
+          font-size: 17px !important;
+        }
+      }
+
+      .intro-text {
+        margin-left: -117px !important;
+  
+        p {
+          font-size: 11px !important;
+        }
+      }
+    }
+  }
+  
   @keyframes animate {
     0%{
       opacity: 1;
@@ -107,6 +158,14 @@ const HomeWrapper = styledComponents.div`
     animation-duration: 35s;
   }
 
+  .circle:nth-child(10) {
+    left: 60%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 3s;
+    animation-duration: 30s;
+  }
+
   .header-text {
     width: 100%;
     padding: 7em 0em;
@@ -116,10 +175,8 @@ const HomeWrapper = styledComponents.div`
       max-width: 800px;
       min-width: 408px;
 
-
       h1 {
         margin: 0;
-        font-weight: 800px;
         font-family: 'Montserrat', sans-serif;
         font-size: 70px;
       }
@@ -128,17 +185,16 @@ const HomeWrapper = styledComponents.div`
         margin: 0 4px;
         font-family: 'Raleway', sans-serif;
         letter-spacing: 1.5px;
-      }
-    
-      p {
-        margin: 0;
+        font-size: 27px;
       }
     }
-  }
 
-  .header-content {
-    min-width: 288px;
-    width: 100%;
+    .intro-text {
+      margin-left: 4px;
+      max-width: 700px;
+      letter-spacing: 1.5px;
+      line-height: 130%;
+    }
   }
 `;
 
